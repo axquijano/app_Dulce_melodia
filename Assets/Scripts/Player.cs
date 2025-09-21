@@ -2,6 +2,9 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.SearchService;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
@@ -17,7 +20,8 @@ public class Player : MonoBehaviour
     private Animator animator; // Referencia al componente Animator para animaciones
 
     private int coins = 0; // Contador de monedas recogidas
-    public TMP_Text coinText; // Referencia al componente TMP_Text para mostrar el contador de monedas
+    public TMP_Text coinText = null; // Referencia al componente TMP_Text para mostrar el contador de monedas
+    private bool isDead = false;
 
     // Start se llama una vez antes de la primera ejecución de Update después de que se crea MonoBehaviour
     void Start()
@@ -30,6 +34,7 @@ public class Player : MonoBehaviour
     // La actualización se llama una vez por cuadro
     void Update()
     {
+        if (isDead) return; 
         move = Input.GetAxis("Horizontal"); // Obtener entrada horizontal (teclas A/D o flechas izquierda/derecha)
         rb2D.linearVelocity = new Vector2(move * speed, rb2D.linearVelocity.y); // Establezca la velocidad horizontal mientras mantiene la velocidad vertical sin cambios
 
@@ -61,7 +66,10 @@ public class Player : MonoBehaviour
         {
             Destroy(collision.gameObject);
             coins++; // Incrementa el contador de monedas
-            coinText.text = coins.ToString(); // Actualiza el texto en pantalla
+            if(coinText != null)
+            {
+                coinText.text = coins.ToString(); // Actualiza el texto en pantalla
+            }
         }
 
         if (collision.transform.CompareTag("Spikes"))
@@ -81,5 +89,21 @@ public class Player : MonoBehaviour
             collision.gameObject.GetComponent<Animator>().enabled = true; // Activa la animación de explosión del barril
             Destroy(collision.gameObject, 0.5f); // Destruye el barril después de 0.5 segundos
         }
+    }
+
+     public void PlayerDamaged()
+    {
+        if (isDead) return;
+        isDead = true; // ✅ lo ponemos aquí antes de arrancar la corrutina
+        rb2D.linearVelocity = Vector2.zero; // Detiene al jugador
+        StartCoroutine(PlayDamageAnimation());
+    }
+
+    private IEnumerator PlayDamageAnimation()
+    {
+        animator.Play("Death");
+        yield return new WaitForSeconds(2f); // espera animación   
+        animator.Play("Idle"); // si quieres que reviva
+        isDead = false; // ya puede moverse
     }
 }
