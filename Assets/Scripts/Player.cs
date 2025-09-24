@@ -8,19 +8,23 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player Movement Settings")]
     public float speed = 5f; // Velocidad del movimiento del jugador
-    private Rigidbody2D rb2D; // Referencia al componente Rigidbody2D
-
-    private float move;
     public float jumpForce = 4f; // Fuerza aplicada cuando el jugador salta
+    private Rigidbody2D rb2D; // Referencia al componente Rigidbody2D
+    private float move;
+    
+    [Header("Ground Check Settings")]
     private bool isGrounded; // Compruebe si el jugador está en el suelo
     public Transform groundCheck; // Transformación para verificar el suelo
     public float groundCheckRadius = 0.1f; // Radio para la verificación del suelo
     public LayerMask groundLayer; // Capa que representa el suelo 
-    private Animator animator; // Referencia al componente Animator para animaciones
 
-    private int coins = 0; // Contador de monedas recogidas
+    [Header("Coin Settings")]
     public TMP_Text coinText = null; // Referencia al componente TMP_Text para mostrar el contador de monedas
+    private int coins = 0; // Contador de monedas recogidas
+    
+    private Animator animator; // Referencia al componente Animator para animaciones
     private bool isDead = false;
 
     // Start se llama una vez antes de la primera ejecución de Update después de que se crea MonoBehaviour
