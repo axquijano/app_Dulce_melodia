@@ -32,6 +32,10 @@ public class Player : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>(); // Obtenga el componente Rigidbody2D adjunto a este GameObject
         animator = GetComponent<Animator>(); // Obtenga el componente Animator adjunto a este GameObject
+
+        int index = PlayerPrefs.GetInt("CharacterSelected", 0);
+        Character character = GameManager.instance.characters[index];
+        animator.runtimeAnimatorController = character.animatorController;
     }
 
     // Update is called once per frame

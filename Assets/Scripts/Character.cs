@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour
+[CreateAssetMenu(fileName = "NewCharacter", menuName = "Character")]
+public class Character : ScriptableObject
 {
-    public GameObject characterPrefab;
-    public Sprite characterSprite;
     public string characterName;
+    public Sprite characterSprite;
+    public RuntimeAnimatorController animatorController;
 }
