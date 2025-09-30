@@ -8,7 +8,6 @@ using UnityEngine.Events;
 public class CardControllerNote : MonoBehaviour
 {
     [SerializeField]
-    /* private List<NotePair> prefabsNotePair; */
     public List<NotePair> prefabs;
 
     //lambda como getter 
@@ -27,7 +26,6 @@ public class CardControllerNote : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        Debug.Log($"Carta clickeada de tipo {CardType}");
         onClicked.Invoke(this);
     }
 

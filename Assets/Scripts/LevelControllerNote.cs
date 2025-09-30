@@ -116,19 +116,6 @@ public class LevelControllerNote : MonoBehaviour
             OnLevelFailed?.Invoke(this, EventArgs.Empty);
         }
         return;
-
-        /* _movementsUser++;
-        _movesText.text = $"Moves: {_levels[_level].Movements - _movementsUser}";
-
-        if (_activeCard.CardType == card.CardType)
-        {
-            
-            StartCoroutine(Score(card));
-            return;
-        }
-
-        StartCoroutine(Fail(card)); */
-
         
     }
 
