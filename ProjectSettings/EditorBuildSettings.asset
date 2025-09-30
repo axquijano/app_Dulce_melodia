@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Memoria.unity
     guid: 11b2bde3bc455514b8103f79b9ff00ed
   - enabled: 1
+    path: Assets/Scenes/Mira.unity
+    guid: e5b96c2d95d14d1458ebcfe1254bccc9
+  - enabled: 1
     path: Assets/Scenes/Globos.unity
     guid: 55a4f5be73a668a418e3ce278e9dbd77
   - enabled: 1

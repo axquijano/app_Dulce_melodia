@@ -35,6 +35,10 @@ public class Player : MonoBehaviour
 
         int index = PlayerPrefs.GetInt("CharacterSelected", 0);
         Character character = GameManager.instance.characters[index];
+        if (GameManager.instance != null && GameManager.instance.hasCheckpoint)
+        {
+            transform.position = GameManager.instance.lastCheckpointPosition;
+        }
         animator.runtimeAnimatorController = character.animatorController;
     }
 
@@ -57,10 +61,17 @@ public class Player : MonoBehaviour
             rb2D.linearVelocity = new Vector2(rb2D.linearVelocity.x, jumpForce); // Aplica una fuerza de salto al Rigidbody2D
         }
 
+
         animator.SetFloat("Speed", Mathf.Abs(move)); // Establece la velocidad en el parámetro del animador
         animator.SetFloat("VerticalVelocity", rb2D.linearVelocity.y); // Establece la velocidad vertical en el parámetro del animador
         animator.SetBool("IsGrounded", isGrounded); // Establece si el jugador está en el suelo en el parámetro del animador
     }
+
+    public void ReachCheckpoint(Vector3 position)
+    {
+        GameManager.instance.SaveCheckpoint(position);
+    }
+
 
     private void FixedUpdate()
     {

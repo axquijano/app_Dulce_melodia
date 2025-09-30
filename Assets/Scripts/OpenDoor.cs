@@ -8,6 +8,7 @@ public class OpenDoor : MonoBehaviour
     public TMP_Text text;
     public string levelName;
     private bool inDoor = false;
+    private Transform playerTransform; // referencia al jugador
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +17,7 @@ public class OpenDoor : MonoBehaviour
         {
             text.gameObject.SetActive(true);
             inDoor = true;
+            playerTransform = collision.transform; // guardamos al jugador
         }
     }
 
@@ -26,6 +28,7 @@ public class OpenDoor : MonoBehaviour
             text.gameObject.SetActive(false);
         }
         inDoor = false;
+        playerTransform = null; // soltamos la referencia
     }
 
     private void Update()
@@ -33,7 +36,12 @@ public class OpenDoor : MonoBehaviour
         if (inDoor && Input.GetKeyDown(KeyCode.E))
         {
             if (text != null) text.gameObject.SetActive(false);
-            // Load the new level
+            // Guardar checkpoint con la posición actual del jugador
+            if (playerTransform != null)
+            {
+                GameManager.instance.SaveCheckpoint(playerTransform.position);
+            }
+            // Cargar el minijuego
             SceneManager.LoadScene(levelName);
         }
     }

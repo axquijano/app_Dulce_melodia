@@ -9,6 +9,7 @@ TagManager:
   - Spikes
   - Barrel
   - Puerta
+  - MinijuegoBarrier
   layers:
   - Default
   - TransparentFX

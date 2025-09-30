@@ -201,6 +201,7 @@ MonoBehaviour:
   xRangeRight: {fileID: 1171961255}
   yRangeUp: {fileID: 77403766}
   yRangeDown: {fileID: 1742869775}
+  difficultyTime: 0
 --- !u!4 &78552924
 Transform:
   m_ObjectHideFlags: 0
@@ -467,11 +468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996934313370141144, guid: 9e20ad6225edfb74b90860e74e408eb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.18
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 4996934313370141144, guid: 9e20ad6225edfb74b90860e74e408eb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.92
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 4996934313370141144, guid: 9e20ad6225edfb74b90860e74e408eb7, type: 3}
       propertyPath: m_LocalPosition.z
