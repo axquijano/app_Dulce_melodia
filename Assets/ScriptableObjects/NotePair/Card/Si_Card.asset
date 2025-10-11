@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f294bbc9aca9b44b33ca685874b48c, type: 3}
+  m_Name: Si_Card
+  m_EditorClassIdentifier: Assembly-CSharp::NotePair
+  noteName: Si
+  note: {fileID: 7687311249887652412, guid: c4e81463d7467ce4aa65753ee6398743, type: 3}
+  pictogram: {fileID: 2128272872466178019, guid: 95cd8539ff30aea479e4c50f06571ea7, type: 3}
+  cardType: 0

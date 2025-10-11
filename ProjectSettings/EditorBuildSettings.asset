@@ -6,26 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menu/MainMenu.unity
     guid: 77357b29f9b16e5408b1a4ee246075a7
   - enabled: 1
-    path: Assets/Scenes/Principal.unity
+    path: Assets/Scenes/Levels/Level1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Memoria.unity
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: 75a0f47b5bfc381498a37e2ef3111f74
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/MiniGame1_FindTheNote.unity
     guid: 11b2bde3bc455514b8103f79b9ff00ed
   - enabled: 1
-    path: Assets/Scenes/Mira.unity
-    guid: e5b96c2d95d14d1458ebcfe1254bccc9
+    path: Assets/Scenes/MiniGames/MiniGame2_NoteRain.unity
+    guid: 27638e0873a246245b9b31ccaee04c63
   - enabled: 1
-    path: Assets/Scenes/Globos.unity
-    guid: 55a4f5be73a668a418e3ce278e9dbd77
+    path: Assets/Scenes/MiniGames/MiniGame3_FluteMagic.unity
+    guid: 1987dec66b709174cad5eecb833445ae
   - enabled: 1
-    path: Assets/MiniGame/Scenes/MiniGame.unity
+    path: Assets/Scenes/Ejemplos/MiniGame.unity
     guid: 0e48dc32c6c455641a285e0150d61655
   - enabled: 1
-    path: Assets/Scenes/SelectCharacterMenu.unity
-    guid: 7089b9493897cc3409fd307328dc5c6a
+    path: Assets/Scenes/Menu/CharacterSelect.unity
+    guid: 9db156aa114f99c4085e6b4e0f6cf003
+  - enabled: 1
+    path: Assets/Scenes/Menu/LevelMenu.unity
+    guid: c7c2ab78fcde3a14399823b1f31da578
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

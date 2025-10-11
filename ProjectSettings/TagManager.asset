@@ -10,6 +10,8 @@ TagManager:
   - Barrel
   - Puerta
   - MinijuegoBarrier
+  - Mira
+  - Spheres
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90350e80542e3594fab321961af56fd7, type: 3}
+  m_Name: VirtualGuy
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  characterName: VirtualGuy
+  characterSprite: {fileID: 7040464113994632316, guid: 995d0b66e3b174c41885c70a1fdc7a00, type: 3}
+  animatorController: {fileID: 9100000, guid: a51463d47fcb540439baae45385c96de, type: 2}
