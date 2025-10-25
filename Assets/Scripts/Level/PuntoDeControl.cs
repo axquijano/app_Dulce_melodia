@@ -27,6 +27,7 @@ public class PuntoDeControl : MonoBehaviour
     {
         animator.SetTrigger("activar");
         yield return new WaitForSeconds(3f);
+        Debug.LogWarning("Checkpoint activado, volviendo al menu de niveles");
         int levelsUnlocked = PlayerPrefs.GetInt("LevelsUnlocked", 0);
         PlayerPrefs.SetInt("LevelsUnlocked", levelsUnlocked + 1);
         PlayerPrefs.Save();

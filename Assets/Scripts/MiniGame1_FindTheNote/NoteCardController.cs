@@ -22,9 +22,12 @@ public class NoteCardController : MonoBehaviour
     // Evento que se dispara al hacer clic en la carta
     public UnityEvent<NoteCardController> onClicked;
 
+    private AudioSource audioSource;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnMouseUpAsButton()
@@ -80,4 +83,30 @@ public class NoteCardController : MonoBehaviour
         }
         return -1;
     }
+
+    public void reproduceSonido() {
+        var selectedPair = AllNotePairs.Find(x => x.cardType == cardType);
+        if (selectedPair != null && selectedPair.noteSound != null) {
+            audioSource.PlayOneShot(selectedPair.noteSound);
+        }
+    }
+
+    public void reproduceSonido(AudioClip clip) {
+        if (clip != null) {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
+        public float GetSoundLength(AudioClip clip = null)
+    {
+        if (clip != null)
+            return clip.length;
+
+        var selectedPair = AllNotePairs.Find(x => x.cardType == cardType);
+        if (selectedPair != null && selectedPair.noteSound != null)
+            return selectedPair.noteSound.length;
+
+        return 0f; // por si acaso no hay sonido
+    }
+
 }

@@ -15,4 +15,5 @@ MonoBehaviour:
   noteName: Mi
   note: {fileID: 4014644924669760205, guid: 46f5fee86132cb6409feb3d3871744a9, type: 3}
   pictogram: {fileID: 1992173242058733513, guid: 5833de4869125194c9b3435ae8938bcc, type: 3}
+  noteSound: {fileID: 8300000, guid: a43ff1336226e6d4c9aee98607997dd2, type: 3}
   cardType: 4

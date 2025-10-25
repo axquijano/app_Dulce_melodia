@@ -15,4 +15,5 @@ MonoBehaviour:
   noteName: Si
   note: {fileID: 7687311249887652412, guid: c4e81463d7467ce4aa65753ee6398743, type: 3}
   pictogram: {fileID: 2128272872466178019, guid: 95cd8539ff30aea479e4c50f06571ea7, type: 3}
+  noteSound: {fileID: 8300000, guid: 2ab3cf77914ceb547b8ff52e9194aae0, type: 3}
   cardType: 0

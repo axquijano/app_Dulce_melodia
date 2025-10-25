@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ca42092c467f142b8b53dbb2ffc6d5, type: 3}
+  m_Name: History
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueRound
+  dialogueTurnsList:
+  - Character: {fileID: 11400000, guid: 252c011907b611144ad7dcdfb0a20b7e, type: 2}
+    dialogueLine: " \xA1Hola, aventurero! Te est\xE1bamos esperando. Este es el Bosque
+      de los Sonidos Encantados. Aqu\xED antes todo ten\xEDa m\xFAsica"
+    background: {fileID: -1489063037253980066, guid: 1771f873a634c9f4ba4bceaf6b0671b5, type: 3}
+  - Character: {fileID: 11400000, guid: 252c011907b611144ad7dcdfb0a20b7e, type: 2}
+    dialogueLine: "Hace mucho, siete amigos protegieron el bosque con sus talismanes
+      m\xE1gicos. Cada talism\xE1n tiene un sonido especial."
+    background: {fileID: -3000983848925917232, guid: c0c92dc43e0c13843b2cb97a78c24a18, type: 3}
+  - Character: {fileID: 11400000, guid: 252c011907b611144ad7dcdfb0a20b7e, type: 2}
+    dialogueLine: "Pero lleg\xF3 la Sombra del Silencio. Rob\xF3 la m\xFAsica y los
+      escondi\xF3 por el bosque quedando triste y callado.."
+    background: {fileID: 1109129820926730150, guid: 9becb29a1bf3f6247b0e5b14391d6405, type: 3}
+  - Character: {fileID: 11400000, guid: 252c011907b611144ad7dcdfb0a20b7e, type: 2}
+    dialogueLine: "Ahora t\xFA eres el elegido. Te dejo esta flauta m\xE1gica. Con
+      ella podr\xE1s buscar los talismanes y devolver la m\xFAsica al bosque. \xBFListo
+      para comenzar la aventura?"
+    background: {fileID: 7712918848870279278, guid: f622d713168fd2d4498d10bd0cb5eee4, type: 3}

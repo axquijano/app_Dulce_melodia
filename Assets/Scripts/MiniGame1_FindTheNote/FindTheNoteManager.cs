@@ -1,6 +1,7 @@
-using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class FindTheNoteManager : MonoBehaviour, IMinigameManager
@@ -26,11 +27,15 @@ public class FindTheNoteManager : MonoBehaviour, IMinigameManager
     [Header("Levels")]
     [SerializeField] private List<LevelSettings> levels = new List<LevelSettings>();
 
+    [Header("Audio Fallo")]
+    [SerializeField] private AudioClip failSound;
+
     private List<NoteCardController> spawnedCards = new List<NoteCardController>();
     private int currentLevel = 0;
     private float elapsedTime = 0f;
     private int targetCardType = -1; // tipo de carta que el jugador debe encontrar
 
+    private bool isSelectCard = false;
     public event EventHandler OnLevelCompleted;
     public event EventHandler OnLevelFailed;
 
@@ -42,7 +47,8 @@ public class FindTheNoteManager : MonoBehaviour, IMinigameManager
     }
 
     private void Update()
-    {
+    { 
+        if (isSelectCard) return;
         elapsedTime += Time.deltaTime;
         timerLabel.text = $"Tiempo: {elapsedTime:F1}s";
     }
@@ -109,19 +115,37 @@ public class FindTheNoteManager : MonoBehaviour, IMinigameManager
 
     private void OnCardSelected(NoteCardController selectedCard)
     {
+        isSelectCard = true;
+        mainCardPrefab.SetHover(true);
+        selectedCard.SetHover(true);
+        // Evita múltiples clics mientras suena
+        StartCoroutine(HandleCardSelection(selectedCard));
+    }
+
+    private IEnumerator HandleCardSelection(NoteCardController selectedCard)
+    {
         if (selectedCard.cardType == targetCardType)
         {
             feedbackLabel.text = "¡Correcto!";
+            selectedCard.reproduceSonido();
+
+            // Esperar a que termine el sonido
+            yield return new WaitForSeconds(selectedCard.GetSoundLength());
             OnLevelCompleted?.Invoke(this, EventArgs.Empty);
             GameManager.instance.CompleteMiniGame(0);
             AdvanceLevel();
         }
         else
         {
+            selectedCard.reproduceSonido(failSound);
             feedbackLabel.text = "Intenta de nuevo";
+
+            yield return new WaitForSeconds(selectedCard.GetSoundLength(failSound));
+
             OnLevelFailed?.Invoke(this, EventArgs.Empty);
         }
     }
+
 
     private void AdvanceLevel()
     {

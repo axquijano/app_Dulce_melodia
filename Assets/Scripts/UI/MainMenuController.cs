@@ -4,15 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Variable para almacenar el nivel
-    public int levels = 1;
     
+
     public void StartGame()
     {   
-        levels = PlayerPrefs.GetInt("LevelsUnlocked", levels);
+        int levels = PlayerPrefs.GetInt("LevelsUnlocked", 0);
+        Debug.LogWarning($"Nivel actual Main menu: {levels}");
         String levelName = "Level" + levels;
         // Cargar la escena del nivel
         SceneManager.LoadScene(levelName);
+        
     }
 
     public void QuitGame()
@@ -23,6 +24,9 @@ public class MainMenuController : MonoBehaviour
     
     public void SelectCharacterMenu()
     {
+        int levels = PlayerPrefs.GetInt("LevelsUnlocked", 0);
+        Debug.LogWarning($"Nivel actual Main menu: {levels}");
         SceneManager.LoadScene("CharacterSelect");
     }
+    
 }

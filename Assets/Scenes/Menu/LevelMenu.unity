@@ -234,7 +234,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5209586f3c3045b4f8d0916f18b655ad, type: 2}
   lastCheckpointPosition: {x: 0, y: 0, z: 0}
   hasCheckpoint: 0
-  levelsCompleted: 000000
+  IsMiniGameComplete: 000000
 --- !u!4 &18598033
 Transform:
   m_ObjectHideFlags: 0
@@ -332,8 +332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -540,8 +540,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -794,8 +794,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 994763974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55607d00cd67ef740b79a6c5ac8a6e37, type: 3}
+  m_Script: {fileID: 11500000, guid: 1be761822df948e46a9b47758d73b402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectLevelManager
   levelButtons:
@@ -1266,8 +1266,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -1474,8 +1474,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -1606,8 +1606,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -1738,8 +1738,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -1954,8 +1954,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:
@@ -2222,8 +2222,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SelectLevel, Assembly-CSharp
+      - m_Target: {fileID: 994763979}
+        m_TargetAssemblyTypeName: SelectLevelManager, Assembly-CSharp
         m_MethodName: changeLevel
         m_Mode: 3
         m_Arguments:

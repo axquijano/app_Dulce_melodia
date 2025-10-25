@@ -15,4 +15,5 @@ MonoBehaviour:
   noteName: La
   note: {fileID: 838990719696989125, guid: 010fb84d4b5e8a643862d0d944bdfb52, type: 3}
   pictogram: {fileID: 5205417807525077094, guid: d1d79a4ff9663f3498f9f5fc4f227da9, type: 3}
+  noteSound: {fileID: 8300000, guid: 1f1c8b08fe3890b4a813540221b88583, type: 3}
   cardType: 1

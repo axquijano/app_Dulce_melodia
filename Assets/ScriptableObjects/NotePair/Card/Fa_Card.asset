@@ -15,4 +15,5 @@ MonoBehaviour:
   noteName: Fa
   note: {fileID: 703609427291465360, guid: e016058d0f402f444979ede235196cce, type: 3}
   pictogram: {fileID: 3244732880943160834, guid: 0986e4b5181cf7d43a9d3ae893768dff, type: 3}
+  noteSound: {fileID: 8300000, guid: b4448bfc12b582f4ebc50503bd7331f7, type: 3}
   cardType: 3

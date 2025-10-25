@@ -15,4 +15,5 @@ MonoBehaviour:
   noteName: Sol
   note: {fileID: 4850761579366119902, guid: 20eb189bc5ef37b41affa2d19e0df7f7, type: 3}
   pictogram: {fileID: 400819421919340033, guid: 6b19280f74d30ee4fa697918a7249624, type: 3}
+  noteSound: {fileID: 8300000, guid: 50a215fd3abc20f4583c43c3ce166d3d, type: 3}
   cardType: 2

@@ -6,7 +6,7 @@ public class NotePair : ScriptableObject
     public string noteName;
     public GameObject  note;
     public GameObject pictogram;
-   /*  public AudioClip noteSound; */
+    public AudioClip noteSound;
     public int cardType;
 }
 

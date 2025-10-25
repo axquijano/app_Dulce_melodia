@@ -54,25 +54,31 @@ public class GameUIManager : MonoBehaviour
 
     private void OnLevelCompleted(object sender, EventArgs e)
     {
+        //Pausar el juego
+        Time.timeScale = 0;
         winPanel.SetActive(true);
         losePanel.SetActive(false);
     }
 
     private void OnLevelFailed(object sender, EventArgs e)
     {
+        Time.timeScale = 0;
         winPanel.SetActive(false);
         losePanel.SetActive(true);
     }
 
     public void ResetGame()
     {
+        // Reiniciar el juego
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void PlayGame(string sceneName = "Level1")
     {
         Time.timeScale = 1;
-        int inlevel = PlayerPrefs.GetInt("LevelsUnlocked", 1);
+        int inlevel = PlayerPrefs.GetInt("LevelsUnlocked", 0);
+        Debug.LogWarning($"GameUI Nivel actual: {inlevel}");
         string levelName = "Level" + inlevel;
         SceneManager.LoadScene(levelName);
     }
